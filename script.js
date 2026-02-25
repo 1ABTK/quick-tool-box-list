@@ -1,6 +1,6 @@
 const projects = [
     { name: "Symbol Alloc Cal", url: "https://1abtk.github.io/symbol-alloc-cal/", icon: "calculator" },
-    { name: "Rakuten Number Search", url: "https://1abtk.github.io/rakuten-available-number-search/", icon: "search" },
+    { name: "Rakuten Number Search", url: "https://1abtk.github.io/rakuten-available-number-search/", icon: "search", status: "deprecated"},
     { name: "PDF to Image", url: "https://1abtk.github.io/pdf-to-image/", icon: "file-type" },
     { name: "DOB Calculation", url: "https://1abtk.github.io/date-of-birth-calculation-description/", icon: "calendar" },
     { name: "5G NR ARFCN Converter", url: "https://1abtk.github.io/5g-nr-arfcn-converter/", icon: "radio" },
@@ -18,7 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.target = "_blank";
         anchor.style.animationDelay = `${index * 0.08}s`;
         
+        // Check for deprecated status
+        const statusFlag = project.status === "deprecated" 
+            ? `<div class="status-flag deprecated">DEPRECATED</div>` 
+            : '';
+
         anchor.innerHTML = `
+            ${statusFlag}
             <div class="tool-icon">
                 <i data-lucide="${project.icon}"></i>
             </div>
@@ -31,12 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         grid.appendChild(anchor);
-        
-        // Trigger the reveal animation
         setTimeout(() => anchor.classList.add('reveal'), 50);
     });
 
-    // Initialize Lucide icons after dynamic content is added
     if (window.lucide) {
         lucide.createIcons();
     }
