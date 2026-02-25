@@ -132,6 +132,34 @@ iframe {
     letter-spacing: 1px;
 }
 
+/* --- STATUS FLAG --- */
+.status-flag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px 12px;
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    z-index: 20;
+}
+
+.status-flag.deprecated {
+    background-color: #ff0000; /* Pure Red */
+    color: #ffffff;
+}
+
+/* Optional: Dull the card if it's deprecated */
+.card:has(.deprecated) {
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+.card:has(.deprecated):hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
 
