@@ -6,8 +6,9 @@ const projects = [
     { name: "5G NR ARFCN Converter", url: "https://1abtk.github.io/5g-nr-arfcn-converter/", icon: "radio" },
     { name: "Image to PDF", url: "https://1abtk.github.io/image2pdf/", icon: "file-up" },
     { name: "QR Code Maker", url: "https://1abtk.github.io/qr-code-maker/", icon: "qr-code" },
-    { name: "ZLT S10 Super Admin", url: "https://chromewebstore.google.com/detail/donuthome-for-zlt-s10/hinnghaoldgikiknkglnepdhjlcljbjl", icon: "bi-router" },
-    { name: "QR Banana", url: "https://microsoftedge.microsoft.com/addons/detail/qr-banana/lifampapcbbacfknifiaflagdbeojicp", icon: "qr-code" }
+    { name: "ZLT S10 Super Admin", url: "https://chromewebstore.google.com/detail/donuthome-for-zlt-s10/hinnghaoldgikiknkglnepdhjlcljbjl", icon: "router" },
+    { name: "QR Banana", url: "https://microsoftedge.microsoft.com/addons/detail/qr-banana/lifampapcbbacfknifiaflagdbeojicp", icon: "qr-code" },
+    { name: "Wheel Picker", url: "https://1abtk.github.io/wheel-picker/", icon: "loader-pinwheel" }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
